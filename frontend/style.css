@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #0b1a3a 0%, #050812 55%, #02030a 100%);
+  color: #e9eefc;
+  padding: 24px;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 18px;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 210, 122, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.header h1 {
+  font-size: 30px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ffd27a, #c8a44d, #fff2cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  margin-top: 6px;
+  color: rgba(233, 238, 252, 0.72);
+}
+
+.status {
+  margin-top: 12px;
+  font-size: 14px;
+  color: rgba(233, 238, 252, 0.8);
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 210, 122, 0.3);
+  background: rgba(2, 3, 10, 0.55);
+}
+
+.nav {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 18px;
+}
+
+.card {
+  border-radius: 18px;
+  border: 1px solid rgba(255, 210, 122, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 18px;
+  min-height: 200px;
+}
+
+.card h2 {
+  color: rgba(255, 242, 204, 0.95);
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  color: rgba(233, 238, 252, 0.7);
+  margin-bottom: 6px;
+}
+
+.field input, .filters input, .filters select, .field select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 210, 122, 0.18);
+  background: rgba(3, 7, 17, 0.72);
+  color: #e9eefc;
+  outline: none;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 210, 122, 0.25);
+  background: rgba(2, 3, 10, 0.55);
+  color: #e9eefc;
+  cursor: pointer;
+  transition: 0.15s ease;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 210, 122, 0.45);
+}
+
+.btn.primary {
+  border: none;
+  color: #0b1020;
+  background: linear-gradient(90deg, #ffd27a, #c8a44d);
+}
+
+.menu-list {
+  display: grid;
+  gap: 10px;
+}
+
+.item {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 210, 122, 0.14);
+  background: rgba(2, 3, 10, 0.55);
+  padding: 12px;
+}
+
+.item-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.item h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.meta {
+  color: rgba(233, 238, 252, 0.72);
+  font-size: 13px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.cart-box {
+  margin-top: 8px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 210, 122, 0.14);
+  background: rgba(2, 3, 10, 0.55);
+  padding: 12px;
+  min-height: 120px;
+}
+
+.muted {
+  margin-top: 10px;
+  color: rgba(233, 238, 252, 0.7);
+  font-size: 13px;
+}
+
+.footer {
+  margin-top: 18px;
+  text-align: center;
+  color: rgba(233, 238, 252, 0.55);
+  font-size: 13px;
+}

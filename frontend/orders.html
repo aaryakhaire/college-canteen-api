@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Canteen - Orders</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <div class="app">
+    <header class="header">
+      <h1>College Canteen Dashboard</h1>
+      <p>Place orders and track order status.</p>
+
+      <div class="nav">
+        <a class="btn" href="./index.html">Menu</a>
+        <a class="btn primary" href="./orders.html">Orders</a>
+      </div>
+    </header>
+
+    <main class="grid">
+      <!-- Place Order -->
+      <section class="card">
+        <h2>Place Order</h2>
+
+        <div class="form">
+          <div class="field">
+            <label>Customer Name</label>
+            <input id="customerName" type="text" placeholder="e.g. Aarya" />
+          </div>
+
+          <div class="field">
+            <label>Select Menu Item</label>
+            <select id="menuSelect"></select>
+          </div>
+
+          <div class="field">
+            <label>Quantity</label>
+            <input id="qty" type="number" value="1" min="1" />
+          </div>
+
+          <button id="addToCartBtn" class="btn">Add To Cart</button>
+        </div>
+
+        <h3 style="margin-top:14px;">Cart</h3>
+        <div id="cartBox" class="cart-box">Cart is empty</div>
+
+        <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+          <button id="placeOrderBtn" class="btn primary">Place Order</button>
+          <button id="clearCartBtn" class="btn">Clear Cart</button>
+        </div>
+
+        <p id="orderMsg" class="muted"></p>
+      </section>
+
+      <!-- Orders List -->
+      <section class="card">
+        <div class="card-top">
+          <h2>Orders</h2>
+          <button id="refreshOrdersBtn" class="btn">Refresh</button>
+        </div>
+
+        <div id="ordersList" class="menu-list">
+          Loading orders...
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Orders module: POST /orders, GET /orders, PATCH /orders/:id/status</p>
+    </footer>
+  </div>
+
+  <script src="./orders.js"></script>
+</body>
+</html>
