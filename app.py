@@ -1,5 +1,6 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
+import os
 from db import get_db_connection
 
 app = Flask(__name__)
@@ -467,5 +468,24 @@ def update_order_status(order_id):
     }), 200
 
 
+# =========================================================
+# ✅ FRONTEND SERVING
+# =========================================================
+
+@app.route("/", methods=["GET"])
+def serve_index():
+    return send_from_directory("frontend", "index.html")
+
+@app.route("/orders-page", methods=["GET"])
+def serve_orders_page():
+    return send_from_directory("frontend", "orders.html")
+
+@app.route("/<path:path>", methods=["GET"])
+def serve_static(path):
+    if os.path.exists(os.path.join("frontend", path)):
+        return send_from_directory("frontend", path)
+    return jsonify({"error": "Not Found"}), 404
+
+
 if __name__ == "__main__":
-    app.run(debug=True, port=5002)
+    app.run(debug=True, port=5002, host="0.0.0.0")
